@@ -1,22 +1,21 @@
 {{ define "main"}}
 
 <div class="row" style="margin-top: 3em;">
-  <div class="col-xs-12 col-md-6 flex-center">
-    <video-player
-      src="https://firebasestorage.googleapis.com/v0/b/fireship-app.appspot.com/o/assets%2Ftrailer.mp4?alt=media&token=98d802b0-d98d-402d-b3c9-d8516508a0d7"
-    ></video-player>
+  <div class="col-xs-12 col-md-6">
+    <div class="vid">
+      <iframe src="https://player.vimeo.com/video/321262943" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div> 
   </div>
   <div class="col-xs-12 col-md-6">
     <h1>Build and ship 🔥 your app ⚡ faster</h1>
     <p class="text-lg">
       Fireship.io is an ecosystem of detailed and practical resources for
       developers who want to
-      <strong class="text-contrast">build and ship high-quaility apps</strong>.
+      <strong class="text-contrast">build and ship high-quality apps</strong>.
     </p>
 
     <a class="btn btn-orange" href="/lessons">Explore</a>
     <google-login>
-      <button slot="signin" class="btn" href="/lessons">
+      <button slot="signin" class="btn">
         {{ partial "svg/google.svg" }} Login Now
       </button>
     </google-login>
@@ -41,7 +40,7 @@
       Courses are
       <strong>linear multi-step projects with several hours of video</strong>.
       They teach you how to build advanced real-world app features from start to
-      finish. <a class="btn btn-sm" href="/courses">go</a>
+      finish. <a class="btn btn-sm" href="/courses">Courses</a>
     </p>
   </div>
 </div>
@@ -94,12 +93,12 @@
     </h2>
     <p>
       Lessons are <strong>non-linear ~10min episodes</strong> covering a variety
-      of topics that include a video, writeup, and github repo. <a class="btn btn-sm" href="/lessons">Watch</a>
+      of topics that include a video, writeup, and github repo. <a class="btn btn-sm" href="{{ .Site.Data.links.youtube }}">Watch</a>
     </p>
   </div>
 
   <div class="col-xs-12 col-sm-4 flex-center">
-    <a href="/lessons"
+    <a href="{{ .Site.Data.links.youtube }}"
       ><img
         src="img/pages/yt.jpg"
         alt="old film gif for video episodes on Fireship.io"
@@ -117,9 +116,9 @@
 
   {{ end }}
 
-  <algolia-button class="col-xs-12">
+  <modal-button selector="algolia-search" class="col-xs-12">
     <button class="btn btn-green">Search All Lessons</button>
-  </algolia-button>
+  </modal-button>
 </div>
 
 <div class="row row-home">

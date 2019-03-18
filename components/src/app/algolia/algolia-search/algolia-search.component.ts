@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, ElementRef, AfterViewInit, Input } from '@angular/core';
+import { Component, ChangeDetectorRef, ElementRef, Input, HostListener, ViewChild } from '@angular/core';
 import * as algolia from 'algoliasearch/lite';
 
 const APP_ID = '05VYZFXKNM';
@@ -8,7 +8,9 @@ const client = algolia(APP_ID, API_KEY);
 @Component({
   templateUrl: './algolia-search.component.html'
 })
-export class AlgoliaSearchComponent implements AfterViewInit  {
+export class AlgoliaSearchComponent {
+
+  constructor(private cd: ChangeDetectorRef, private el: ElementRef) { }
 
   index = client.initIndex('content');
 
@@ -27,18 +29,28 @@ export class AlgoliaSearchComponent implements AfterViewInit  {
   hits: any[];
   results: any;
 
-  constructor(private cd: ChangeDetectorRef, private el: ElementRef) { }
+  @ViewChild('searchInput') searchInput: ElementRef;
 
   // Public toggles
   @Input() show = () => this.toggle(true);
   @Input() hide = () => this.toggle(false);
 
-  ngAfterViewInit() {
-
+  @HostListener('document:keydown', ['$event'])
+  keyDownHandler(e: KeyboardEvent) {
+    if (e.ctrlKey && e.shiftKey && e.code === 'KeyP') {
+      // Ctrl + Shift + P shortcut to open the search box
+      e.preventDefault();
+      this.toggle(true);
+    } else if (e.code === 'Escape') {
+      // ESC to close the search box
+      this.toggle(false);
+    }
   }
 
   toggle(val) {
     this.visible = val;
+    // Focus the input element
+    this.searchInput.nativeElement.focus();
     this.cd.detectChanges();
   }
 

@@ -4,15 +4,19 @@
   "description": "Awesome content for developers",
   "main": "index.js",
   "scripts": {
+    "test": "cypress open",
     "dev:design": "webpack --watch",
     "dev:hugo": "cd hugo && hugo server --disableFastRender",
     "dev": "concurrently \"npm run dev:hugo\" \"npm run dev:design\"",
     "build:design": "webpack",
     "build:hugo": "cd hugo && hugo",
-    "build:components": "cd components && npm run build",
+    "build:components": "cd components && npm run lint && npm run build",
     "build": "rm -rf public && npm run build:design && npm run build:components && npm run build:hugo",
     "algolia": "atomic-algolia",
-    "deploy": "firebase deploy --debug --token \"$FIREBASE_TOKEN\" --only hosting"
+    "deploy": "firebase deploy --debug --token \"$FIREBASE_TOKEN\" --only hosting",
+    "link-upstream": "git remote add upstream https://github.com/fireship-io/fireship.io",
+    "sync": "git fetch && git checkout master && git merge upstream/master && git push",
+    "reset": "rm -rf ./node_modules ./package-lock.json && npm install && npm run dev"
   },
   "keywords": [],
   "author": "",

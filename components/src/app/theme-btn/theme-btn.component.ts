@@ -1,4 +1,4 @@
-import { Component, ElementRef, AfterViewInit, ViewEncapsulation, Inject, HostListener } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, ViewEncapsulation, Inject, HostListener, ChangeDetectorRef } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { SetState } from '../state.decorator';
 import { LOCAL_STORAGE } from '../local-storage.service';
@@ -24,9 +24,10 @@ export class ThemeBtnComponent implements AfterViewInit {
 
   constructor(
     private el: ElementRef,
+    private cd: ChangeDetectorRef,
     @Inject(LOCAL_STORAGE) private localStorage: Storage,
     @Inject(DOCUMENT) private document: Document) {
-    this.theme = this.getIt();
+      this.theme = this.getIt();
   }
 
   @HostListener('document:DOMContentLoaded')
@@ -49,7 +50,7 @@ export class ThemeBtnComponent implements AfterViewInit {
 
   getIt(): Theme {
     const theme = this.localStorage.getItem(this.themeKey);
-    if (theme in Object.keys(this.themeMap)) {
+    if (theme in this.themeMap) {
       return theme as Theme;
     } else {
       return 'dark-theme';

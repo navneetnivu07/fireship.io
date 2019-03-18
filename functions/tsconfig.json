@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "lib": ["es6", "esnext"],
+    "lib": ["es6", "esnext", "dom"],
     "module": "commonjs",
     "noImplicitReturns": true,
     "outDir": "lib",
     "sourceMap": true,
-    "target": "es6"
+    "target": "es6",
+    "typeRoots": [
+      "./functions/node_modules/@types"
+    ]
   },
   "compileOnSave": true,
   "include": [

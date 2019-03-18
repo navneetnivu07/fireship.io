@@ -1,6 +1,6 @@
 ---
 title: Terms
-lastmod: 2018-11-15T08:36:36-07:00
+lastmod: 2019-02-15T08:36:36-07:00
 draft: false
 ---
 
@@ -12,6 +12,14 @@ The site design, logo, video content subject to copyright © 2019-present | Fire
 
 User contributions licensed under cc by-sa 3.0 with attribution required. 
 
+### Memberships
+
+Billing: Subscription fees for the PRO Membership are recurring payments (except where identified as otherwise, such as the Lifetime Membership and Single Course Purchases). The term may be monthly, quarterly, or annual, as described in the course the of transaction. Your subscription begins upon payment of a first installment of subscription fees. The subscription renews at the specified interval as applicable upon the payment of automatically recurring subscription fees. Monthly or annual fees are charged on the same day of the month that the subscription began. (For example, if a monthly subscription began on the 29th, 30th, or 31st day of a month, then membership will renew on the last day of any month that doesn’t have that many days.)
+
+Cancellations and Refunds: You can cancel your PRO Membership at any time. If you purchase a subscription that automatically renews, you may cancel the subscription any time before the end of the current billing period and the cancellation will take effect immediately. 
+
+Lapsed Payment: If payment for a subscription fails, the user account will be downgraded and granted a 7-day grace period to update the payment source. If a successful payment is not made within 7 days the membership will be fully canceled and renewal will be subject to current prices. 
+
 ### Disclaimer
 
 The materials on the fireship.io web site are provided “as is”. Fireship.io makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further,fireship.io does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet web site or otherwise relating to such materials or on any sites linked to this site.
@@ -22,8 +30,8 @@ In no event shall fireship.io liable for any damages (including, without limitat
 
 ### Intellectual Property Rights
 
-Fireship.io.com is committed to protecting intellectual property rights. fireship.io.com strictly follows DMCA guidelines for unauthorized use of copyrighted material. Any inquires regarding the reproduction of content on this site must be directed to the party holding the proprietary rights to the specified content.You shall not distribute, publish, transmit, modify, display or create derivative works from material obtained with this service.
-To file a notice of copyright infringement with fireship.io.com, you will need to provide a written communication that follows the guidelines set in Section 512(c)(3) of the Digital Millennium Copyright Act (the “DMCA”).
+Fireship.io is committed to protecting intellectual property rights. fireship.io strictly follows DMCA guidelines for unauthorized use of copyrighted material. Any inquires regarding the reproduction of content on this site must be directed to the party holding the proprietary rights to the specified content.You shall not distribute, publish, transmit, modify, display or create derivative works from material obtained with this service.
+To file a notice of copyright infringement with fireship.io, you will need to provide a written communication that follows the guidelines set in Section 512(c)(3) of the Digital Millennium Copyright Act (the “DMCA”).
 
 ### Governing Law
 

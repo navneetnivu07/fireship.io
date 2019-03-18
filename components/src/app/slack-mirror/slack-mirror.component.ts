@@ -1,4 +1,5 @@
-import { Component, ChangeDetectorRef, AfterViewInit, Input } from '@angular/core';
+import { Component, ChangeDetectorRef, AfterViewInit, OnDestroy, Input } from '@angular/core';
+
 import * as firebase from 'firebase/app';
 import { collectionData } from 'rxfire/firestore';
 import { tap } from 'rxjs/operators';
@@ -8,7 +9,7 @@ import { SetState } from '../state.decorator';
 @Component({
   templateUrl: './slack-mirror.component.html',
 })
-export class SlackMirrorComponent implements AfterViewInit {
+export class SlackMirrorComponent implements AfterViewInit, OnDestroy {
 
   @Input() permalink;
 
@@ -60,7 +61,8 @@ export class SlackMirrorComponent implements AfterViewInit {
   }
 
   get qLink() {
-    return `@question ${this.fullUrl} [Insert Your Question]`;
+    // return `@question ${this.fullUrl} [Insert Your Question]`;
+    return `@Question ${this.fullUrl} your question...?`;
   }
 
   asHtml(val: string) {
